@@ -1,0 +1,27 @@
+# 依賴套件
+node_modules/
+
+# 編譯輸出
+dist/
+build/
+
+# 環境變數
+.env
+.env.local
+.env.*.local
+
+# 日誌
+logs/
+*.log
+npm-debug.log*
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+
+# IDE 設定
+.vscode/
+.idea/
+
+# TypeScript 快取
+*.tsbuildinfo

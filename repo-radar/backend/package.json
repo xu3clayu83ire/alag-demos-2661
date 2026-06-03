@@ -1,0 +1,27 @@
+{
+  "name": "repo-radar-backend",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.1",
+    "@types/ws": "^8.18.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "@apollo/server": "^5.5.1",
+    "@as-integrations/aws-lambda": "^4.0.1",
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.1058.0",
+    "@aws-sdk/client-dynamodb": "^3.1058.0",
+    "@aws-sdk/lib-dynamodb": "^3.1058.0",
+    "@graphql-tools/schema": "^10.0.33",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "graphql": "^16.14.0",
+    "graphql-subscriptions": "^3.0.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-ws": "^6.0.8",
+    "ws": "^8.21.0"
+  }
+}
