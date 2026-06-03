@@ -108,6 +108,47 @@ npm run dev
 # Apollo Sandbox: http://localhost:4000/
 ```
 
+### 用 Apollo Sandbox 手動測試
+
+開啟 `http://localhost:4000/`，依序執行以下三個操作：
+
+**Step 1 — 建立 Subscription（先開，等待推送）**
+
+在 Sandbox 開一個新分頁執行 Subscription，連線後保持不關：
+
+```graphql
+subscription {
+  onAnalysisUpdate(sessionId: "test-123") {
+    chunk
+    done
+  }
+}
+```
+
+**Step 2 — 執行 Query 確認 GitHub 連線正常**
+
+```graphql
+query {
+  getRepo(owner: "facebook", repo: "react") {
+    name
+    description
+    commits {
+      message
+    }
+  }
+}
+```
+
+**Step 3 — 執行 Mutation 觸發 AI 分析**
+
+```graphql
+mutation {
+  analyzeRepo(owner: "facebook", repo: "react", sessionId: "test-123")
+}
+```
+
+Mutation 回傳 `"test-123"` 後，Step 1 的 Subscription 視窗會開始逐筆收到 AI 分析的 `chunk`，最後一筆 `done: true` 代表結束。
+
 ### 啟動前端
 
 ```bash

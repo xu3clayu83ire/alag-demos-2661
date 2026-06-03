@@ -69,6 +69,7 @@ async function startServer() {
             target: '#sandbox',
             initialEndpoint: 'http://localhost:4000/graphql',
             initialSubscriptionEndpoint: 'ws://localhost:4000/graphql',
+            initialSubscriptionProtocol: 'graphql-ws',
           });
         </script>
         </body>
